@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,21 @@ using System.Windows.Forms;
 
 namespace GoodPraDog
 {
-    public partial class Login: Form
+    public partial class Form1: Form
     {
-        public Login()
+        private bool Login(string usuario, string senha, string arquivo)
+        {
+            foreach (string linha in File.ReadAllLines(arquivo))
+            {
+                string[] partes = linha.Split(';');
+                if (partes[1] == usuario && partes[2] == senha)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public Form1()
         {
             InitializeComponent();
         }
@@ -61,12 +74,13 @@ namespace GoodPraDog
 
         private void Entrar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
+            string path = "data.txt";
+            if (Login(userTxb.Text, passwordTxb.Text, path))
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

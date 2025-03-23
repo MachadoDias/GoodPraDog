@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.title = new System.Windows.Forms.Label();
-            this.subtitle = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.userTxb = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.emailTxb = new System.Windows.Forms.TextBox();
             this.showPasswordButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.createAccountButton = new System.Windows.Forms.Button();
             this.loginLink = new System.Windows.Forms.LinkLabel();
             this.passwordTxb = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.emailTxb = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.userTxb = new System.Windows.Forms.TextBox();
+            this.subtitle = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
             this.confirmPasswordTxb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,50 +66,38 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // title
+            // label3
             // 
-            this.title.AutoSize = true;
-            this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(45, 58);
-            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(150, 40);
-            this.title.TabIndex = 1;
-            this.title.Text = "Pet Care";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(52, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Confirmar senha";
             // 
-            // subtitle
+            // label1
             // 
-            this.subtitle.AutoSize = true;
-            this.subtitle.BackColor = System.Drawing.Color.Transparent;
-            this.subtitle.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtitle.Location = new System.Drawing.Point(48, 98);
-            this.subtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.subtitle.Name = "subtitle";
-            this.subtitle.Size = new System.Drawing.Size(145, 22);
-            this.subtitle.TabIndex = 12;
-            this.subtitle.Text = "Tela de Cadastro";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(52, 136);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "E-mail";
             // 
-            // label4
+            // emailTxb
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(52, 191);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Usuário";
-            // 
-            // userTxb
-            // 
-            this.userTxb.BackColor = System.Drawing.SystemColors.Window;
-            this.userTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTxb.Location = new System.Drawing.Point(20, 206);
-            this.userTxb.Margin = new System.Windows.Forms.Padding(2);
-            this.userTxb.Name = "userTxb";
-            this.userTxb.Size = new System.Drawing.Size(195, 29);
-            this.userTxb.TabIndex = 13;
+            this.emailTxb.BackColor = System.Drawing.SystemColors.Window;
+            this.emailTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTxb.Location = new System.Drawing.Point(20, 151);
+            this.emailTxb.Margin = new System.Windows.Forms.Padding(2);
+            this.emailTxb.Name = "emailTxb";
+            this.emailTxb.Size = new System.Drawing.Size(195, 29);
+            this.emailTxb.TabIndex = 20;
+            this.emailTxb.TextChanged += new System.EventHandler(this.emailTxb_TextChanged);
             // 
             // showPasswordButton
             // 
@@ -119,7 +107,7 @@
             this.showPasswordButton.FlatAppearance.BorderSize = 0;
             this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordButton.ForeColor = System.Drawing.Color.Transparent;
-            this.showPasswordButton.Location = new System.Drawing.Point(186, 265);
+            this.showPasswordButton.Location = new System.Drawing.Point(186, 264);
             this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2);
             this.showPasswordButton.Name = "showPasswordButton";
             this.showPasswordButton.Size = new System.Drawing.Size(22, 24);
@@ -141,6 +129,7 @@
             // createAccountButton
             // 
             this.createAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(105)))), ((int)(((byte)(90)))));
+            this.createAccountButton.Enabled = false;
             this.createAccountButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
             this.createAccountButton.FlatAppearance.BorderSize = 0;
             this.createAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,38 +167,53 @@
             this.passwordTxb.Size = new System.Drawing.Size(195, 29);
             this.passwordTxb.TabIndex = 18;
             this.passwordTxb.UseSystemPasswordChar = true;
+            this.passwordTxb.TextChanged += new System.EventHandler(this.passwordTxb_TextChanged);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(52, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "E-mail";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(52, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Usuário";
             // 
-            // emailTxb
+            // userTxb
             // 
-            this.emailTxb.BackColor = System.Drawing.SystemColors.Window;
-            this.emailTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTxb.Location = new System.Drawing.Point(20, 151);
-            this.emailTxb.Margin = new System.Windows.Forms.Padding(2);
-            this.emailTxb.Name = "emailTxb";
-            this.emailTxb.Size = new System.Drawing.Size(195, 29);
-            this.emailTxb.TabIndex = 20;
+            this.userTxb.BackColor = System.Drawing.SystemColors.Window;
+            this.userTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userTxb.Location = new System.Drawing.Point(20, 206);
+            this.userTxb.Margin = new System.Windows.Forms.Padding(2);
+            this.userTxb.Name = "userTxb";
+            this.userTxb.Size = new System.Drawing.Size(195, 29);
+            this.userTxb.TabIndex = 13;
+            this.userTxb.TextChanged += new System.EventHandler(this.userTxb_TextChanged_1);
             // 
-            // label3
+            // subtitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(52, 300);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Confirmar senha";
+            this.subtitle.AutoSize = true;
+            this.subtitle.BackColor = System.Drawing.Color.Transparent;
+            this.subtitle.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtitle.Location = new System.Drawing.Point(48, 98);
+            this.subtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtitle.Name = "subtitle";
+            this.subtitle.Size = new System.Drawing.Size(145, 22);
+            this.subtitle.TabIndex = 12;
+            this.subtitle.Text = "Tela de Cadastro";
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Location = new System.Drawing.Point(45, 58);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(150, 40);
+            this.title.TabIndex = 1;
+            this.title.Text = "Pet Care";
             // 
             // confirmPasswordTxb
             // 
@@ -220,6 +224,7 @@
             this.confirmPasswordTxb.Size = new System.Drawing.Size(195, 29);
             this.confirmPasswordTxb.TabIndex = 23;
             this.confirmPasswordTxb.UseSystemPasswordChar = true;
+            this.confirmPasswordTxb.TextChanged += new System.EventHandler(this.confirmPasswordTxb_TextChanged);
             // 
             // CreateAccount
             // 

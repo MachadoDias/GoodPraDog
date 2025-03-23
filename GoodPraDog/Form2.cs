@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,10 @@ namespace GoodPraDog
 {
     public partial class CreateAccount: Form
     {
+        private void UpdateButtonState()
+        {
+            createAccountButton.Enabled = !string.IsNullOrEmpty(emailTxb.Text) && !string.IsNullOrWhiteSpace(userTxb.Text) && !string.IsNullOrWhiteSpace(passwordTxb.Text) && !string.IsNullOrWhiteSpace(confirmPasswordTxb.Text);
+        }
         public CreateAccount()
         {
             InitializeComponent();
@@ -29,7 +34,17 @@ namespace GoodPraDog
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            if(passwordTxb.Text != confirmPasswordTxb.Text)
+            {
+                MessageBox.Show("As senhas não são iguais");
+                return;
+            }
+            string path = "data.txt";
+            using (StreamWriter sw = new StreamWriter(path, true))
+            {
+                sw.WriteLine($"{emailTxb.Text};{userTxb.Text};{passwordTxb.Text}");
+            }
+            MessageBox.Show("Conta criada com sucesso");
         }
 
         private void showPasswordButton_Click(object sender, EventArgs e)
@@ -41,9 +56,28 @@ namespace GoodPraDog
 
         private void loginLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login login = new Login();
+            Form1 login = new Form1();
             login.Show();
             this.Hide();
+        }
+
+        private void emailTxb_TextChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+        }
+        private void userTxb_TextChanged_1(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+        }
+
+        private void passwordTxb_TextChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+        }
+
+        private void confirmPasswordTxb_TextChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
         }
     }
 }

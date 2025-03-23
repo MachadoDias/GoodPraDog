@@ -1,6 +1,6 @@
 ﻿namespace GoodPraDog
 {
-    partial class Login
+    partial class Form1
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.title);
             this.panel1.Controls.Add(this.passwordTxb);
             this.panel1.Location = new System.Drawing.Point(413, -4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 567);
             this.panel1.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordButton.ForeColor = System.Drawing.Color.Transparent;
             this.showPasswordButton.Location = new System.Drawing.Point(193, 284);
-            this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2);
             this.showPasswordButton.Name = "showPasswordButton";
             this.showPasswordButton.Size = new System.Drawing.Size(22, 24);
             this.showPasswordButton.TabIndex = 12;
@@ -120,7 +120,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.Location = new System.Drawing.Point(68, 340);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(111, 24);
             this.loginButton.TabIndex = 5;
@@ -148,7 +148,7 @@
             this.userTxb.BackColor = System.Drawing.SystemColors.Window;
             this.userTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userTxb.Location = new System.Drawing.Point(27, 204);
-            this.userTxb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userTxb.Margin = new System.Windows.Forms.Padding(2);
             this.userTxb.Name = "userTxb";
             this.userTxb.Size = new System.Drawing.Size(195, 29);
             this.userTxb.TabIndex = 1;
@@ -171,14 +171,14 @@
             // 
             this.passwordTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxb.Location = new System.Drawing.Point(27, 281);
-            this.passwordTxb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordTxb.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTxb.Name = "passwordTxb";
             this.passwordTxb.Size = new System.Drawing.Size(195, 29);
             this.passwordTxb.TabIndex = 10;
             this.passwordTxb.UseSystemPasswordChar = true;
             this.passwordTxb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // Login
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,9 +187,9 @@
             this.ClientSize = new System.Drawing.Size(661, 495);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Login";
+            this.Name = "Form1";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

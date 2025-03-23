@@ -109,5 +109,15 @@ namespace GoodPraDog.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_silhouettes_cat_1199162 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_silhouettes-cat_1199162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
