@@ -17,6 +17,28 @@ namespace GoodPraDog
         private int workTime = 1500;
         private int breakTime = 300;
         private bool isWorking = true;
+        string path;
+
+        private void isSaved()
+        {
+            if (!string.IsNullOrEmpty(path))
+            {
+                if (richTextBox1.Text == File.ReadAllLines(path)[0])
+                {
+                    return;
+                }
+            }
+            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
+        }
         private string Countdown(int time)
         {
             int minutes = time / 60;
@@ -82,7 +104,7 @@ namespace GoodPraDog
             saveFileDialog.FileName = "paciente.txt";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string path = saveFileDialog.FileName;
+                path = saveFileDialog.FileName;
                 using (StreamWriter sw = new StreamWriter(path))
                 {
                     sw.WriteLine(richTextBox1.Text);
@@ -104,6 +126,18 @@ namespace GoodPraDog
                     richTextBox1.Text = sr.ReadToEnd();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "Nome do paciente: \nIdade: \nPeso: \nVacinas: \nDiagnóstico: \nMedicação: \nObservações: ";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

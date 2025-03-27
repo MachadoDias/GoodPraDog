@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\vecteezy_silhouettes-cat_1199162.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

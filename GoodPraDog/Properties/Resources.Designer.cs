@@ -103,6 +103,16 @@ namespace GoodPraDog.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_the_ahnafpiash_5800272 {
             get {
                 object obj = ResourceManager.GetObject("pexels-the-ahnafpiash-5800272", resourceCulture);

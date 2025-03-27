@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,6 +46,9 @@ namespace GoodPraDog
                 sw.WriteLine($"{emailTxb.Text};{userTxb.Text};{passwordTxb.Text}");
             }
             MessageBox.Show("Conta criada com sucesso");
+            Form1 login = new Form1();
+            login.Show();
+            this.Hide();
         }
 
         private void showPasswordButton_Click(object sender, EventArgs e)
