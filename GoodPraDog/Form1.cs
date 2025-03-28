@@ -81,6 +81,10 @@ namespace GoodPraDog
                 form3.Show();
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

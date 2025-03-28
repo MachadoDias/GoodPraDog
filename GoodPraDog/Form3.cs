@@ -17,25 +17,40 @@ namespace GoodPraDog
         private int workTime = 1500;
         private int breakTime = 300;
         private bool isWorking = true;
-        string path;
+        private string path;
 
-        private void isSaved()
+        private void SaveFile()
         {
-            if (!string.IsNullOrEmpty(path))
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Arquivos de Texto (*.txt)|*.txt";
+            saveFileDialog.Title = "Salvar arquivo";
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.FileName = "paciente.txt";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (richTextBox1.Text == File.ReadAllLines(path)[0])
+                path = saveFileDialog.FileName;
+                File.WriteAllText(path, richTextBox1.Text);
+                MessageBox.Show("Arquivo salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void IsSaved()
+        {
+            if (!string.IsNullOrEmpty(path) && File.Exists(path))
+            {
+                if (richTextBox1.Text == File.ReadAllText(path))
                 {
                     return;
                 }
             }
-            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("O arquivo tem alterações não salvas. Deseja salvar?", "Arquivo não salvo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //do something
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
+                if (!string.IsNullOrEmpty(path))
+                {
+                    File.WriteAllText (path, richTextBox1.Text);
+                    return;
+                }
+                SaveFile();
             }
 
         }
@@ -97,24 +112,12 @@ namespace GoodPraDog
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Arquivos de Texto (*.txt)|*.txt";
-            saveFileDialog.Title = "Salvar arquivo";
-            saveFileDialog.DefaultExt = "txt";
-            saveFileDialog.FileName = "paciente.txt";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                path = saveFileDialog.FileName;
-                using (StreamWriter sw = new StreamWriter(path))
-                {
-                    sw.WriteLine(richTextBox1.Text);
-                }
-                MessageBox.Show("Arquivo salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            SaveFile();
         }
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
+            IsSaved();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Arquivos de Texto (*.txt)|*.txt";
             openFileDialog.Title = "Abrir arquivo";
@@ -130,11 +133,13 @@ namespace GoodPraDog
 
         private void button1_Click(object sender, EventArgs e)
         {
+            IsSaved();
             richTextBox1.Text = "Nome do paciente: \nIdade: \nPeso: \nVacinas: \nDiagnóstico: \nMedicação: \nObservações: ";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            IsSaved();
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
