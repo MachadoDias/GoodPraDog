@@ -35,7 +35,15 @@ namespace GoodPraDog
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if(passwordTxb.Text != confirmPasswordTxb.Text)
+            string email = emailTxb.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (!match.Success)
+            {
+                MessageBox.Show("Digite um e-mail válido");
+                return;
+            }
+            if (passwordTxb.Text != confirmPasswordTxb.Text)
             {
                 MessageBox.Show("As senhas não são iguais");
                 return;
