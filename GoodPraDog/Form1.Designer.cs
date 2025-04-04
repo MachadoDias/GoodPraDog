@@ -52,10 +52,10 @@
             this.panel1.Controls.Add(this.userTxb);
             this.panel1.Controls.Add(this.title);
             this.panel1.Controls.Add(this.passwordTxb);
-            this.panel1.Location = new System.Drawing.Point(413, -4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(551, -5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 567);
+            this.panel1.Size = new System.Drawing.Size(331, 698);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -67,10 +67,10 @@
             this.showPasswordButton.FlatAppearance.BorderSize = 0;
             this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordButton.ForeColor = System.Drawing.Color.Transparent;
-            this.showPasswordButton.Location = new System.Drawing.Point(193, 284);
-            this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.showPasswordButton.Location = new System.Drawing.Point(257, 350);
+            this.showPasswordButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showPasswordButton.Name = "showPasswordButton";
-            this.showPasswordButton.Size = new System.Drawing.Size(22, 24);
+            this.showPasswordButton.Size = new System.Drawing.Size(29, 30);
             this.showPasswordButton.TabIndex = 12;
             this.showPasswordButton.UseVisualStyleBackColor = false;
             this.showPasswordButton.Click += new System.EventHandler(this.button1_Click);
@@ -80,10 +80,9 @@
             this.subtitle.AutoSize = true;
             this.subtitle.BackColor = System.Drawing.Color.Transparent;
             this.subtitle.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtitle.Location = new System.Drawing.Point(64, 140);
-            this.subtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtitle.Location = new System.Drawing.Point(85, 172);
             this.subtitle.Name = "subtitle";
-            this.subtitle.Size = new System.Drawing.Size(119, 22);
+            this.subtitle.Size = new System.Drawing.Size(148, 29);
             this.subtitle.TabIndex = 11;
             this.subtitle.Text = "Tela de Login";
             this.subtitle.Click += new System.EventHandler(this.label3_Click);
@@ -92,10 +91,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(59, 180);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(79, 222);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Usuário";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -104,10 +102,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(59, 257);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(79, 316);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Senha";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -115,14 +112,15 @@
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(105)))), ((int)(((byte)(90)))));
+            this.loginButton.Enabled = false;
             this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(68, 340);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(2);
+            this.loginButton.Location = new System.Drawing.Point(91, 418);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(111, 24);
+            this.loginButton.Size = new System.Drawing.Size(148, 30);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Entrar";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -134,10 +132,9 @@
             this.newAccountLink.AutoSize = true;
             this.newAccountLink.BackColor = System.Drawing.Color.Transparent;
             this.newAccountLink.LinkColor = System.Drawing.Color.Maroon;
-            this.newAccountLink.Location = new System.Drawing.Point(88, 376);
-            this.newAccountLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.newAccountLink.Location = new System.Drawing.Point(117, 463);
             this.newAccountLink.Name = "newAccountLink";
-            this.newAccountLink.Size = new System.Drawing.Size(75, 13);
+            this.newAccountLink.Size = new System.Drawing.Size(92, 16);
             this.newAccountLink.TabIndex = 4;
             this.newAccountLink.TabStop = true;
             this.newAccountLink.Text = "Crie sua conta";
@@ -147,10 +144,10 @@
             // 
             this.userTxb.BackColor = System.Drawing.SystemColors.Window;
             this.userTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTxb.Location = new System.Drawing.Point(27, 204);
-            this.userTxb.Margin = new System.Windows.Forms.Padding(2);
+            this.userTxb.Location = new System.Drawing.Point(36, 251);
+            this.userTxb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userTxb.Name = "userTxb";
-            this.userTxb.Size = new System.Drawing.Size(195, 29);
+            this.userTxb.Size = new System.Drawing.Size(259, 34);
             this.userTxb.TabIndex = 1;
             this.userTxb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -159,10 +156,9 @@
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(60, 98);
-            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title.Location = new System.Drawing.Point(80, 121);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(150, 40);
+            this.title.Size = new System.Drawing.Size(182, 49);
             this.title.TabIndex = 0;
             this.title.Text = "Pet Care";
             this.title.Click += new System.EventHandler(this.label1_Click);
@@ -170,24 +166,24 @@
             // passwordTxb
             // 
             this.passwordTxb.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxb.Location = new System.Drawing.Point(27, 281);
-            this.passwordTxb.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTxb.Location = new System.Drawing.Point(36, 346);
+            this.passwordTxb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTxb.Name = "passwordTxb";
-            this.passwordTxb.Size = new System.Drawing.Size(195, 29);
+            this.passwordTxb.Size = new System.Drawing.Size(259, 34);
             this.passwordTxb.TabIndex = 10;
             this.passwordTxb.UseSystemPasswordChar = true;
             this.passwordTxb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GoodPraDog.Properties.Resources.b7768e84bd144332a193310b0bbdbb2d;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(661, 495);
+            this.ClientSize = new System.Drawing.Size(881, 609);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Login";

@@ -14,8 +14,8 @@ namespace GoodPraDog
     public partial class Form3: Form
     {
         private int elapsedTime = 0;
-        private int workTime = 1500;
-        private int breakTime = 300;
+        private int workTime = 40;
+        private int breakTime = 15;
         private bool isWorking = true;
         private string path;
 
@@ -139,6 +139,7 @@ namespace GoodPraDog
 
         private void button2_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
             IsSaved();
             Form1 form1 = new Form1();
             form1.Show();

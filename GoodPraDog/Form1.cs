@@ -25,6 +25,11 @@ namespace GoodPraDog
             }
             return false;
         }
+
+        private void UpdateButtonState()
+        {
+            loginButton.Enabled = !string.IsNullOrWhiteSpace(userTxb.Text) && !string.IsNullOrWhiteSpace(passwordTxb.Text);
+        }
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +49,7 @@ namespace GoodPraDog
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateButtonState();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,7 +74,7 @@ namespace GoodPraDog
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateButtonState();
         }
 
         private void Entrar_Click(object sender, EventArgs e)
