@@ -3,4 +3,4 @@ Tela de login:
 Tela de cadastro:
 ![image](https://github.com/user-attachments/assets/145f7251-3fae-49e2-ae90-184ac8d34aa2)
 Menu:
-![image](https://github.com/user-attachments/assets/d34eb119-43ff-4d43-82b8-43efae587ac4)
+![Captura de tela 2025-04-04 183442](https://github.com/user-attachments/assets/8e960918-9836-428c-bcdb-d0980e7c2b08)
