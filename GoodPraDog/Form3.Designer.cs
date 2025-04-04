@@ -36,7 +36,7 @@
             this.openFileButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.countdownLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.newButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,7 +46,7 @@
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(163, 15);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(668, 523);
             this.richTextBox1.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.ForeColor = System.Drawing.Color.White;
             this.saveButton.Location = new System.Drawing.Point(33, 79);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 28);
             this.saveButton.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.openFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openFileButton.ForeColor = System.Drawing.Color.White;
             this.openFileButton.Location = new System.Drawing.Point(33, 114);
-            this.openFileButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openFileButton.Margin = new System.Windows.Forms.Padding(4);
             this.openFileButton.Name = "openFileButton";
             this.openFileButton.Size = new System.Drawing.Size(100, 28);
             this.openFileButton.TabIndex = 3;
@@ -121,20 +121,20 @@
             this.countdownLabel.TabIndex = 5;
             this.countdownLabel.Text = "mm:ss";
             // 
-            // button1
+            // newButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(105)))), ((int)(((byte)(90)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(33, 150);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.newButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(105)))), ((int)(((byte)(90)))));
+            this.newButton.FlatAppearance.BorderSize = 0;
+            this.newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newButton.ForeColor = System.Drawing.Color.White;
+            this.newButton.Location = new System.Drawing.Point(33, 150);
+            this.newButton.Margin = new System.Windows.Forms.Padding(4);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(100, 28);
+            this.newButton.TabIndex = 7;
+            this.newButton.Text = "Novo";
+            this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -166,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.newButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.countdownLabel);
             this.Controls.Add(this.label1);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.currentTimeLabel);
             this.Controls.Add(this.richTextBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.Text = "Menu";
@@ -195,7 +195,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label countdownLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button button2;
     }
 }

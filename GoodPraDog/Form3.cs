@@ -64,13 +64,13 @@ namespace GoodPraDog
         private void UpdateControls() {
             if (isWorking)
             {
-                saveButton.Enabled = true;
+                newButton.Enabled = true;
                 richTextBox1.Enabled = true;
                 openFileButton.Enabled = true;
             }
             else
             {
-                saveButton.Enabled = false;
+                newButton.Enabled = false;
                 richTextBox1.Enabled = false;
                 openFileButton.Enabled = false;
             }
